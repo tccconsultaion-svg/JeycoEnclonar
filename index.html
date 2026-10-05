@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeyco Enclonar | Full-Stack Engineer & Systems Architect</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@500;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-[#09090b] text-slate-100 font-sans selection:bg-amber-500 selection:text-slate-950 transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- Ambient Light Orbs -->
+  <div class="fixed top-12 left-10 w-96 h-96 bg-amber-500/10 rounded-full blur-[160px] pointer-events-none z-0"></div>
+  <div class="fixed bottom-10 right-10 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[180px] pointer-events-none z-0"></div>
+
+  <!-- Mobile Top Bar -->
+  <div class="lg:hidden sticky top-0 z-50 bg-[#09090b]/90 backdrop-blur-xl border-b border-zinc-800 px-6 py-4 flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center font-bold text-slate-950 font-mono text-xs">JE</div>
+      <span class="font-bold text-base text-white">Jeyco <span class="text-amber-400">Enclonar</span></span>
+    </a>
+    <div class="flex items-center gap-3">
+      <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-zinc-800 text-slate-300"><i class="fas fa-moon text-xs"></i></button>
+      <button id="mobile-menu-btn" class="p-2 rounded-lg bg-zinc-800 text-slate-300"><i class="fas fa-bars text-sm"></i></button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobile-menu" class="hidden lg:hidden fixed top-16 left-4 right-4 z-40 bg-zinc-900/95 border border-zinc-800 rounded-2xl p-6 backdrop-blur-2xl shadow-2xl space-y-3">
+    <a href="#hero" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-zinc-800">Home</a>
+    <a href="#about" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-zinc-800">About</a>
+    <a href="#skills" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-zinc-800">Skills</a>
+    <a href="#projects" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-zinc-800">Work</a>
+    <a href="#experience" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400 border-b border-zinc-800">Experience</a>
+    <a href="#contact" class="block py-2 text-sm font-semibold text-slate-200 hover:text-amber-400">Contact Desk</a>
+  </div>
+
+  <!-- Main Layout Wrapper (Split Screen on Desktop) -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow py-8 lg:py-12">
+    <div class="grid lg:grid-cols-12 gap-8 items-start relative">
+
+      <!-- LEFT SIDEBAR: Sticky Executive Spotlight Panel (Col 4) -->
+      <aside class="lg:col-span-4 lg:sticky lg:top-8 bg-zinc-900/90 border border-zinc-800/90 rounded-3xl p-6 sm:p-8 backdrop-blur-xl flex flex-col justify-between space-y-6 shadow-2xl">
+        
+        <div>
+          <!-- Header Profile Spotlight -->
+          <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-800 mb-6 group">
+            <img src="assets/profile.jpg" alt="Jeyco Enclonar" class="w-full h-full object-cover object-top filter contrast-105 group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80"></div>
+            
+            <div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-zinc-900/90 border border-zinc-800 text-[11px] font-mono text-amber-400 flex items-center gap-1.5 shadow-lg">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Available
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <h2 class="text-2xl font-extrabold text-white font-heading">Jeyco Enclonar</h2>
+            <p class="text-xs font-mono text-amber-400 uppercase tracking-wider font-semibold">Full-Stack Engineer & Systems Specialist</p>
+            <p class="text-xs text-slate-400 leading-relaxed pt-2">
+              Building scalable cloud engines, high-concurrency web interfaces, and modern full-stack platforms.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Audio Visualizer Simulator -->
+        <div class="p-4 rounded-2xl bg-zinc-950 border border-zinc-800/80 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs">
+              <i class="fas fa-wave-square"></i>
+            </div>
+            <div>
+              <div class="text-[11px] font-bold text-white">Ambient Mode</div>
+              <div class="text-[10px] text-slate-400 font-mono" id="ambient-status">Active Audio Wave</div>
+            </div>
+          </div>
+          <!-- Equalizer Bars -->
+          <div class="flex items-end gap-1 h-5" id="eq-bars">
+            <span class="w-1 bg-amber-400 rounded-full animate-bounce h-3"></span>
+            <span class="w-1 bg-amber-400 rounded-full animate-bounce h-5" style="animation-delay: 0.15s"></span>
+            <span class="w-1 bg-amber-400 rounded-full animate-bounce h-2" style="animation-delay: 0.3s"></span>
+            <span class="w-1 bg-amber-400 rounded-full animate-bounce h-4" style="animation-delay: 0.45s"></span>
+          </div>
+        </div>
+
+        <!-- Quick Contacts & vCard -->
+        <div class="space-y-3 pt-2">
+          <button id="copy-vcard-btn" class="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+            <i class="far fa-address-card"></i>
+            <span id="vcard-btn-text">Copy Contact vCard</span>
+          </button>
+
+          <div class="flex items-center justify-center gap-3 pt-2 text-slate-400">
+            <a href="https://github.com" target="_blank" aria-label="GitHub" class="w-9 h-9 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center hover:text-amber-400 transition-all"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="w-9 h-9 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center hover:text-blue-400 transition-all"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:jeyco.enclonar@gmail.com" aria-label="Email" class="w-9 h-9 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center hover:text-emerald-400 transition-all"><i class="fas fa-envelope"></i></a>
+            <button id="theme-toggle-desktop" aria-label="Theme toggle" class="w-9 h-9 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center hover:text-amber-400 transition-all"><i id="theme-icon-desktop" class="fas fa-moon text-xs"></i></button>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- RIGHT MAIN CONTENT: Scrollable Studio Canvas (Col 8) -->
+      <main class="lg:col-span-8 space-y-12">
+
+        <!-- Section 1: Hero Studio Overview -->
+        <section id="hero" class="bg-zinc-900/60 border border-zinc-800/90 rounded-3xl p-8 sm:p-10 backdrop-blur-xl relative overflow-hidden">
+          <div class="space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono font-semibold">
+              <i class="fas fa-code-branch text-[10px]"></i> Studio Portfolio v4.0
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight font-heading">
+              Engineering high-concurrency systems & <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-blue-400">interactive web apps.</span>
+            </h1>
+
+            <p class="text-slate-300 text-base sm:text-lg font-medium flex items-center gap-2">
+              <span>Focus:</span>
+              <span id="typed-role" class="text-amber-400 font-bold border-b-2 border-amber-400 font-mono"></span>
+            </p>
+
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Hello! I'm Jeyco Enclonar. I specialize in architecting resilient backend microservices, intuitive frontend UI/UX components, and scalable database solutions for modern software products.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-zinc-800/80">
+              <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800 text-center">
+                <div class="text-2xl font-bold text-amber-400 font-heading">32+</div>
+                <div class="text-[10px] text-slate-400 uppercase font-mono mt-1">Projects</div>
+              </div>
+              <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800 text-center">
+                <div class="text-2xl font-bold text-blue-400 font-heading">99.9%</div>
+                <div class="text-[10px] text-slate-400 uppercase font-mono mt-1">Uptime</div>
+              </div>
+              <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800 text-center">
+                <div class="text-2xl font-bold text-emerald-400 font-heading">15+</div>
+                <div class="text-[10px] text-slate-400 uppercase font-mono mt-1">Stack Tools</div>
+              </div>
+              <div class="p-3 rounded-xl bg-zinc-950 border border-zinc-800 text-center">
+                <div class="text-2xl font-bold text-amber-400 font-heading">4+</div>
+                <div class="text-[10px] text-slate-400 uppercase font-mono mt-1">Years Exp.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Technical Skills Grid -->
+        <section id="skills" class="bg-zinc-900/60 border border-zinc-800/90 rounded-3xl p-8 backdrop-blur-xl">
+          <div class="flex items-center justify-between mb-8">
+            <div>
+              <h2 class="text-xs uppercase font-mono font-bold tracking-widest text-amber-400">Technical Capability</h2>
+              <h3 class="text-2xl font-bold text-white font-heading mt-1">Skills & Stack Radar</h3>
+            </div>
+            <span class="text-xs font-mono text-slate-400">ES6 / Py / Go / Cloud</span>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <!-- Skill 1 -->
+            <div class="p-5 rounded-2xl bg-zinc-950 border border-zinc-800 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-bold text-white">Frontend Architecture</span>
+                <span class="text-xs font-mono text-amber-400 font-bold">95%</span>
+              </div>
+              <p class="text-xs text-slate-400">JavaScript, TypeScript, React.js, Next.js, Tailwind CSS</p>
+              <div class="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
+                <div class="bg-amber-400 h-full rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="p-5 rounded-2xl bg-zinc-950 border border-zinc-800 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-bold text-white">Backend Systems</span>
+                <span class="text-xs font-mono text-blue-400 font-bold">90%</span>
+              </div>
+              <p class="text-xs text-slate-400">Node.js, Express, Python FastAPI, REST & GraphQL APIs</p>
+              <div class="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
+                <div class="bg-blue-400 h-full rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="p-5 rounded-2xl bg-zinc-950 border border-zinc-800 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-bold text-white">Databases & Caching</span>
+                <span class="text-xs font-mono text-emerald-400 font-bold">88%</span>
+              </div>
+              <p class="text-xs text-slate-400">PostgreSQL, MongoDB, Redis, Prisma ORM</p>
+              <div class="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
+                <div class="bg-emerald-400 h-full rounded-full" style="width: 88%"></div>
+              </div>
+            </div>
+
+            <!-- Skill 4 -->
+            <div class="p-5 rounded-2xl bg-zinc-950 border border-zinc-800 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-bold text-white">DevOps & Tooling</span>
+                <span class="text-xs font-mono text-amber-400 font-bold">86%</span>
+              </div>
+              <p class="text-xs text-slate-400">Docker, Git/GitHub Actions, CI/CD, Vercel & Cloud</p>
+              <div class="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
+                <div class="bg-amber-400 h-full rounded-full" style="width: 86%"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Portfolio Showcase -->
+        <section id="projects" class="bg-zinc-900/60 border border-zinc-800/90 rounded-3xl p-8 backdrop-blur-xl">
+          <div class="flex items-center justify-between mb-8">
+            <div>
+              <h2 class="text-xs uppercase font-mono font-bold tracking-widest text-blue-400">Projects</h2>
+              <h3 class="text-2xl font-bold text-white font-heading mt-1">Featured Work Showcase</h3>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <!-- Project 1 -->
+            <div class="p-6 rounded-2xl bg-zinc-950 border border-zinc-800 hover:border-amber-500/50 transition-all group">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-mono border border-amber-500/20">Full-Stack Enterprise</span>
+                <a href="#" class="text-slate-400 group-hover:text-amber-400 transition-colors"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+              <h4 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors mb-2">Solaris Cloud Monitoring Console</h4>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">A real-time cloud metric dashboard providing sub-second server analytics, container health checks, and security alerts.</p>
+              <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+                <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800">React</span>
+                <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800">Node.js</span>
+                <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800">PostgreSQL</span>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="p-6 rounded-2xl bg-zinc-950 border border-zinc-800 hover:border-blue-500/50 transition-all group">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-mono border border-blue-500/20">High-Concurrency API</span>
+                <a href="#" class="text-slate-400 group-hover:text-blue-400 transition-colors"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+              <h4 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors mb-2">Pulse Financial Stream Processor</h4>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">High-speed payment distribution engine with automated webhook retry handlers, JWT security, and audit logs.</p>
+              <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+                <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800">Python</span>
+                <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800">FastAPI</span>
+                <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800">Redis</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: Experience Timeline -->
+        <section id="experience" class="bg-zinc-900/60 border border-zinc-800/90 rounded-3xl p-8 backdrop-blur-xl">
+          <div class="mb-8">
+            <h2 class="text-xs uppercase font-mono font-bold tracking-widest text-amber-400">Career Roadmap</h2>
+            <h3 class="text-2xl font-bold text-white font-heading mt-1">Professional Experience</h3>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-6 rounded-2xl bg-zinc-950 border border-zinc-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <span class="text-xs font-mono font-bold text-amber-400 uppercase">2024 - PRESENT</span>
+                <h4 class="text-lg font-bold text-white mt-1">Senior Full-Stack Software Engineer</h4>
+                <p class="text-xs text-slate-400">Horizon Digital Technologies</p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-slate-300 self-start sm:self-auto">Full-Time</span>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-zinc-950 border border-zinc-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <span class="text-xs font-mono font-bold text-blue-400 uppercase">2022 - 2024</span>
+                <h4 class="text-lg font-bold text-white mt-1">Full-Stack Web Developer</h4>
+                <p class="text-xs text-slate-400">Apex Software Labs</p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-slate-300 self-start sm:self-auto">Full-Time</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 5: Contact Desk -->
+        <section id="contact" class="bg-zinc-900/60 border border-zinc-800/90 rounded-3xl p-8 backdrop-blur-xl">
+          <div class="mb-8">
+            <h2 class="text-xs uppercase font-mono font-bold tracking-widest text-blue-400">Let's Connect</h2>
+            <h3 class="text-2xl font-bold text-white font-heading mt-1">Send a Message</h3>
+          </div>
+
+          <form id="contact-form" class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <input type="text" required placeholder="Your Name" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 text-sm" />
+              <input type="email" required placeholder="Your Email" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 text-sm" />
+            </div>
+            <input type="text" required placeholder="Subject" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 text-sm" />
+            <textarea rows="4" required placeholder="Your Message..." class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 text-sm resize-none"></textarea>
+            
+            <button type="submit" class="w-full py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+              <i class="fas fa-paper-plane text-xs"></i>
+              <span>Send Message to Jeyco</span>
+            </button>
+            <div id="form-feedback" class="hidden p-4 rounded-xl text-xs font-semibold text-center"></div>
+          </form>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="bg-zinc-950 border-t border-zinc-900 py-6 text-slate-500 text-xs text-center">
+    <p>&copy; 2026 Jeyco Enclonar. All rights reserved. Crafted with precision.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

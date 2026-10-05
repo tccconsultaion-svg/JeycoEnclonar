@@ -1,0 +1,61 @@
+/* Custom CSS for Gabriel Santos Studio Website */
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  .font-heading {
+    font-family: 'Cabinet Grotesk', sans-serif;
+  }
+  .font-mono {
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #eab308;
+}
+
+/* Light Theme Overrides */
+body.light-theme {
+  background-color: #f4f4f5;
+  color: #09090b;
+}
+
+body.light-theme aside,
+body.light-theme section {
+  background-color: #ffffff;
+  border-color: #e4e4e7;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4 {
+  color: #09090b;
+}
+
+body.light-theme input,
+body.light-theme textarea {
+  background-color: #ffffff;
+  border-color: #d4d4d8;
+  color: #09090b;
+}
+
+body.light-theme footer {
+  background-color: #ffffff;
+  border-color: #e4e4e7;
+  color: #71717a;
+}
